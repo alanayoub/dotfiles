@@ -1,15 +1,22 @@
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+""""""""""""""""""""""""""""""""""""""""""""
+" Vundle Config                            
+""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'scrooloose/nerdtree'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'https://github.com/Lokaltog/vim-distinguished'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'https://github.com/skammer/vim-css-color.git'
+Bundle 'https://github.com/tpope/vim-surround.git'
+Bundle 'https://github.com/scrooloose/nerdcommenter.git'
+Bundle 'https://github.com/tpope/vim-fugitive.git'
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -85,15 +92,6 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-""""""""""""""""""""""""""""""""""""""""""""
-" Vundle Config                            
-""""""""""""""""""""""""""""""""""""""""""""
-
-Bundle 'scrooloose/nerdtree'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'https://github.com/Lokaltog/vim-distinguished'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'https://github.com/skammer/vim-css-color.git'
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Themes/colours
@@ -118,3 +116,16 @@ set expandtab
 
 set number " Line numbers
 
+set foldmethod=marker " Folding stuff
+
+filetype plugin on " needed for nerdcommenter
+
+" tab navigation like firefox
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
+nnoremap <C-Insert> :tabnew<CR>
+nnoremap <C-Delete> :tabclose<CR>
