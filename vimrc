@@ -17,6 +17,7 @@ Bundle 'https://github.com/skammer/vim-css-color.git'
 Bundle 'https://github.com/tpope/vim-surround.git'
 Bundle 'https://github.com/scrooloose/nerdcommenter.git'
 Bundle 'https://github.com/tpope/vim-fugitive.git'
+Bundle 'https://github.com/nono/vim-handlebars.git'
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -129,3 +130,11 @@ inoremap <C-tab>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
 nnoremap <C-Insert> :tabnew<CR>
 nnoremap <C-Delete> :tabclose<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""
+" Character limit
+""""""""""""""""""""""""""""""""""""""""""""
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%121v.\+/
+
