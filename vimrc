@@ -9,15 +9,18 @@ call vundle#rc()
 """"""""""""""""""""""""""""""""""""""""""""
 " Vundle Config                            
 """"""""""""""""""""""""""""""""""""""""""""
-Bundle 'scrooloose/nerdtree'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'https://github.com/Lokaltog/vim-distinguished'
+"Bundle 'pangloss/vim-javascript'
+"Bundle 'https://github.com/Lokaltog/vim-distinguished'
 Bundle 'jelera/vim-javascript-syntax'
-Bundle 'https://github.com/skammer/vim-css-color.git'
+Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'https://github.com/ap/vim-css-color.git'
+Bundle 'https://github.com/mustache/vim-mustache-handlebars.git'
 Bundle 'https://github.com/tpope/vim-surround.git'
-Bundle 'https://github.com/scrooloose/nerdcommenter.git'
 Bundle 'https://github.com/tpope/vim-fugitive.git'
-Bundle 'https://github.com/nono/vim-handlebars.git'
+Bundle 'https://github.com/kien/ctrlp.vim'
+Bundle 'https://github.com/tpope/vim-commentary.git'
+
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -97,11 +100,10 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""
 " Themes/colours
 """"""""""""""""""""""""""""""""""""""""""""
-set t_Co=256
-syntax on
+syntax enable
 set background=dark
-colorscheme jellybeans
 "colorscheme distinguished
+colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Nerdtree
@@ -131,6 +133,18 @@ inoremap <C-t>     <Esc>:tabnew<CR>
 nnoremap <C-Insert> :tabnew<CR>
 nnoremap <C-Delete> :tabclose<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""
+" Font size 
+""""""""""""""""""""""""""""""""""""""""""""
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 9
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Character limit
