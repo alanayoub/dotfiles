@@ -18,6 +18,7 @@ Bundle 'https://github.com/ap/vim-css-color.git'
 Bundle 'https://github.com/mustache/vim-mustache-handlebars.git'
 Bundle 'https://github.com/tpope/vim-surround.git'
 Bundle 'https://github.com/tpope/vim-fugitive.git'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'https://github.com/kien/ctrlp.vim'
 Bundle 'https://github.com/tpope/vim-commentary.git'
 
@@ -67,8 +68,8 @@ if has("autocmd")
   augroup vimrcEx
   au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+  " For all text files set 'textwidth' to 120 characters.
+  autocmd FileType text setlocal textwidth=120
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -119,18 +120,18 @@ set expandtab
 
 set number " Line numbers
 
-set foldmethod=marker " Folding stuff
+" Folding
+set foldmethod=manual
+" set foldnestmax=10
+" set nofoldenable
+" set foldlevel=1
 
 filetype plugin on " needed for nerdcommenter
 
 " tab navigation like firefox
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-right> :tabn<cr>
+nnoremap <C-left> :tabp<cr>
 nnoremap <C-t>     :tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<CR>
-nnoremap <C-Insert> :tabnew<CR>
 nnoremap <C-Delete> :tabclose<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""
@@ -152,3 +153,13 @@ endif
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%121v.\+/
 
+" Wrapped lines goes down/up to next row, rather than next line in file.
+nnoremap j gj
+nnoremap k gk
+
+" Yank from the cursor to the end of the line, to be consistent with C and D.
+nnoremap Y y$
+
+" GitGutter
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
