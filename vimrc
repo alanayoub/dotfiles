@@ -14,6 +14,8 @@ call vundle#rc()
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jonathanfilip/vim-lucius'
 Bundle 'https://github.com/ap/vim-css-color.git'
@@ -24,6 +26,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'https://github.com/kien/ctrlp.vim'
 Bundle 'https://github.com/tpope/vim-commentary.git'
 
+set t_Co=256
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -103,10 +106,14 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""
 " Themes/colours
 """"""""""""""""""""""""""""""""""""""""""""
-set t_Co=256
 syntax enable
 colorscheme lucius
 LuciusBlack
+
+""""""""""""""""""""""""""""""""""""""""""""
+" Syntax
+""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_javascript_checkers = ['jshint']
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Nerdtree
