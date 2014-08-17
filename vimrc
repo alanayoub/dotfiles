@@ -7,13 +7,15 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 """"""""""""""""""""""""""""""""""""""""""""
-" Vundle Config                            
+" Vundle Config
 """"""""""""""""""""""""""""""""""""""""""""
 "Bundle 'pangloss/vim-javascript'
 "Bundle 'https://github.com/Lokaltog/vim-distinguished'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'jonathanfilip/vim-lucius'
 Bundle 'https://github.com/ap/vim-css-color.git'
 Bundle 'https://github.com/mustache/vim-mustache-handlebars.git'
 Bundle 'https://github.com/tpope/vim-surround.git'
@@ -101,16 +103,16 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""
 " Themes/colours
 """"""""""""""""""""""""""""""""""""""""""""
+set t_Co=256
 syntax enable
-set background=dark
-"colorscheme distinguished
-colorscheme solarized
+colorscheme lucius
+LuciusBlack
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Nerdtree
 """"""""""""""""""""""""""""""""""""""""""""
 map <F2> :NERDTreeToggle<CR>
-
+"
 """"""""""""""""""""""""""""""""""""""""""""
 " Spaces and Tabs
 """"""""""""""""""""""""""""""""""""""""""""
@@ -135,7 +137,7 @@ nnoremap <C-t>     :tabnew<CR>
 nnoremap <C-Delete> :tabclose<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""
-" Font size 
+" Font size
 """"""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
   if has("gui_gtk2")
