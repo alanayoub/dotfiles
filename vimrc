@@ -174,3 +174,5 @@ nnoremap Y y$
 " GitGutter
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
+
+hi MatchParen cterm=bold ctermbg=none ctermfg=green
