@@ -11,6 +11,7 @@ call vundle#rc()
 """"""""""""""""""""""""""""""""""""""""""""
 "Bundle 'pangloss/vim-javascript'
 "Bundle 'https://github.com/Lokaltog/vim-distinguished'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'scrooloose/nerdtree'
@@ -20,13 +21,13 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jonathanfilip/vim-lucius'
-Bundle 'https://github.com/ap/vim-css-color.git'
-Bundle 'https://github.com/mustache/vim-mustache-handlebars.git'
-Bundle 'https://github.com/tpope/vim-surround.git'
-Bundle 'https://github.com/tpope/vim-fugitive.git'
+Bundle 'ap/vim-css-color'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'https://github.com/kien/ctrlp.vim'
-Bundle 'https://github.com/tpope/vim-commentary.git'
+Bundle 'tpope/vim-commentary'
 
 set t_Co=256
 
@@ -175,4 +176,11 @@ nnoremap Y y$
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 
+" Color scheme
 hi MatchParen cterm=bold ctermbg=none ctermfg=green
+
+hi IndentGuidesOdd  guibg=0 ctermbg=233
+hi IndentGuidesEven guibg=5 ctermbg=234
+
+" Set leader
+let mapleader = ","
