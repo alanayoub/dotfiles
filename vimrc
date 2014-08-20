@@ -147,6 +147,20 @@ nnoremap <C-t>     :tabnew<CR>
 nnoremap <C-Delete> :tabclose<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""
+" Panes
+""""""""""""""""""""""""""""""""""""""""""""
+
+" Split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" More natural split openings
+set splitbelow
+set splitright
+
+""""""""""""""""""""""""""""""""""""""""""""
 " Font size
 """"""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
