@@ -26,8 +26,10 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'https://github.com/kien/ctrlp.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-commentary'
+Bundle 'vim-scripts/django.vim'
+Bundle 'christoomey/vim-tmux-navigator'
 
 set t_Co=256
 
