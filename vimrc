@@ -197,6 +197,7 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=green
 
 hi IndentGuidesOdd  guibg=0 ctermbg=233
 hi IndentGuidesEven guibg=5 ctermbg=234
+let g:indent_guides_enable_on_vim_startup = 1
 
 " Set leader
 let mapleader = ","
