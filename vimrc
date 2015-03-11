@@ -21,7 +21,7 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jonathanfilip/vim-lucius'
-Bundle 'ap/vim-css-color'
+" Bundle 'ap/vim-css-color'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
@@ -30,6 +30,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'vim-scripts/django.vim'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'elzr/vim-json'
 
 set t_Co=256
 
@@ -195,8 +196,8 @@ let g:gitgutter_eager = 0
 " Color scheme
 hi MatchParen cterm=bold ctermbg=none ctermfg=green
 
-hi IndentGuidesOdd  guibg=0 ctermbg=233
-hi IndentGuidesEven guibg=5 ctermbg=234
+hi IndentGuidesOdd  guibg=0 ctermbg=232
+hi IndentGuidesEven guibg=5 ctermbg=16
 let g:indent_guides_enable_on_vim_startup = 1
 
 " Set leader
