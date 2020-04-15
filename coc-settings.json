@@ -1,0 +1,385 @@
+{
+
+  // "http.proxy": "", // default: "", http proxy uri, used for extensions that send request. Format: proxy-server:1234 or user:password@prox-server:1234 with auth support"
+  // "http.proxyStrictSSL": true, // default: true
+  // "https.rejectUnauthorized": true, // default: true
+  // "npm.binPath": "npm", // default: "npm", Command or absolute path to npm or yarn."
+  // "languageserver": {}, // "Dictionary of languageservers, key is used as id of languageserver.", "default": {},
+
+  "coc.preferences.extensionUpdateCheck": "daily",                      // "Interval for check extension update, could be daily, weekly, never", "default": "daily", "enum": ["daily", "weekly", "never"]
+  "coc.preferences.hoverTarget": "float",                               // "Target to show hover information, default is floating window when possible.", "enum": ["preview", "echo", "float"]
+  // "coc.preferences.colorSupport": true,                                 // "Enable color highlight if language server support it.", "default": true
+  // "coc.preferences.enableFloatHighlight": true,                         // "Enable highlight for floating window.", "default": true
+  // "coc.preferences.jumpCommand": "edit",                                // "Command used for location jump, like goto definition, goto references etc.", "default": "edit"
+  // "coc.preferences.formatOnType": true,                                 // "Set to true to enable format on type", "default": false
+  // "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "typescript.tsx"],                          // "Filetypes that should run format on save.", "default": [],
+  // "coc.preferences.promptWorkspaceEdit": true,                          // "Prompt confirm from user for workspace edit.", "default": true
+  // "coc.preferences.useQuickfixForLocations": false,                     // "Use vim's quickfix list for jump locations,\n need restart on change.", "default": false
+  // "coc.preferences.snippetStatusText": "SNIP",                          // "Text shown in statusline to indicate snippet session is activated." "default": "SNIP",
+  // "coc.preferences.previewAutoClose": true,                             // "Auto close preview window on cursor move.", "default": true
+  // "coc.preferences.currentFunctionSymbolAutoUpdate": false,             // "Automatically update the value of b:coc_current_function on CursorHold event", "default": false
+  // "coc.preferences.formatOnInsertLeave": false,                         // "Trigger format on type when insert leave by send \n to the server.", "default": false
+  // "coc.preferences.rootPatterns": [".git", ".hg", ".projections.json"], // "Root patterns to resolve workspaceFolder from parent folders of opened files, resolved from up to down.", "default": [".git", ".hg", ".projections.json"],
+  // "coc.preferences.watchmanPath": null,                                 // "executable path for https://facebook.github.io/watchman/, detected from $PATH by default", "default": null
+  // "coc.preferences.messageLevel": "more",                               // "Message level for filter echoed messages, could be 'more', 'warning' and 'error'", "default": "more", "enum": ["more", "warning", "error"]
+  // "coc.preferences.bracketEnterImprove": true,                          // "Improve enter inside bracket `<> {} [] ()` by add new empty line below and place cursor to it. Works with `coc#on_enter()`", "default": true
+  // "coc.preferences.formatOnTypeFiletypes": [],                          // "Filetypes that should run format on typing. Only take effect when `coc.preferences.formatOnType` set `true`", "default": [],
+  // "coc.preferences.highlightTimeout": 500,                              // "Highlight timeout for buffer in floating window." "default": 500, "minimum": 200, "maximum": 5000,
+  // "coc.preferences.snippets.enable": true,                              // "Set to false to disable snippets support.", "default": true
+
+  "suggest.enablePreselect": false,                    // "Enable preselect feature, only works on neovim",
+  // "suggest.maxPreviewWidth": 80,                      // "Maximum width of floating preview window."
+  // "suggest.enablePreview": false,                     // "Add preview option to completeopt, default: false.",
+  "suggest.floatEnable": true,                        // "Enable floating window for documentation when possible.",
+  // "suggest.labelMaxLength": 200,                      // "Max length of abbr that shown as label of complete item.",
+  // "suggest.detailMaxLength": 100,                     // "Max length of detail that should be shown in popup menu.",
+  // "suggest.detailField": "menu",                      // "Where to add the detail in complete item when it's less than max length.", "enum": ["abbr", "menu", "preview"]
+  // "suggest.autoTrigger": "always",                    // "How should completion be triggered", "enum": ["always", "trigger", "none"]
+  // "suggest.languageSourcePriority": 99,               // "Priority of language sources."
+  // "suggest.numberSelect": false,                      // "Input number to select complete item, it could wrong when using <up> and <down> to select complete item",
+  // "suggest.disableKind": false,                       // "Remove kind field from vim complete item.",
+  // "suggest.disableMenu": false,                       // "Remove menu field from vim complete item.",
+  // "suggest.disableMenuShortcut": false,               // "Disable shortcut of completion source in menu.", "default": false
+  // "suggest.snippetIndicator": "~",                    // "The character used in abbr of complete item to indicate the item could be expand as snippet." "default": "~",
+  // "suggest.maxCompleteItemCount": 50,                 // "Maximum number of complete items shown in vim" "default": 50,
+  // "suggest.preferCompleteThanJumpPlaceholder": false, // "Confirm completion instead of jump to next placeholder when completion is activated.", "default": false
+  // "suggest.fixInsertedWord": true,                    // "Make inserted word replace word characters after cursor position.", "default": true
+  // "suggest.localityBonus": true,                      // "Boost suggestions that appear closer to the cursor position.", "default": true
+  // "suggest.triggerAfterInsertEnter": false,           // "Trigger completion after InsertEnter, auto trigger should be 'always' to enable this option", "default": false
+  // "suggest.timeout": false,                           // "Timeout for completion, in miliseconds." "default": 5000, "minimum": 500, "maximum": 15000,
+  // "suggest.minTriggerInputLength": false,             // "Mininal input length for trigger completion, default 1" "default": 1,
+  // "suggest.triggerCompletionWait": 60,                // "Wait time between trigger character type and completion start, for wait server content synchronize." "default": 60, "minimum": 50, "maximum": 300,
+  // "suggest.echodocSupport": false,                    // "When enabled, add function signature to user_data.signature to support echodoc.vim" "default": false,
+  // "suggest.acceptSuggestionOnCommitCharacter": false, // "Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character. Requires CompleteChanged event to work." "default": false,
+  // "suggest.noselect": false,                          // "Not make vim select first item on completion start", "default": true
+  // "suggest.keepCompleteopt": false,                   // "When enabled, completeopt is not overriden, auto completion will be disabled if completeopt doesn't have noinsert and noselect.", "default": false
+  // "suggest.lowPrioritySourceLimit": 90,               // "Max items count for source priority lower than 90." "minimum": 1, "maximum": 100,
+  // "suggest.highPrioritySourceLimit": 90,              // "Max items count for source priority bigger than or equal to 90." "minimum": 1, "maximum": 100,
+  // "suggest.removeDuplicateItems": false,              // "Remove completion items with duplicated word for all sources, snippet items are excluded.", "default": false
+  // "suggest.defaultSortMethod": "length",              // "Default sorting behavior for suggested completion items.", "default": "length", "enum": ["length", "alphabetical"]
+  // "suggest.completionItemKindLabels": {},             // "Set custom labels to completion items' kinds." default: {},
+  // "suggest.asciiCharactersOnly": false,               // "Suggest ASCII characters only", "default": false
+  // "suggest.invalidInsertCharacters": [" ", "(", "<", "{", "[", "\r", "\n"], // "Invalid character for strip valid word when inserting text of complete item.", "default": [" ", "(", "<", "{", "[", "\r", "\n"]
+
+  "diagnostic.enable": true,                          // "Set to false to disable diagnostic display", "default": true
+  // "diagnostic.messageTarget": "float",                // "Diagnostic message target.", "default": "float", "enum": ["echo", "float"]
+  "diagnostic.virtualText": true,                    // "Use NeoVim virtual text to display diagnostics", "default": false
+  // "diagnostic.virtualTextPrefix": "VT",                // "The prefix added virtual text diagnostics", "default": " "
+  "diagnostic.level": "hint",                         // "Used for filter diagnostics by diagnostic severity.", "default": "hint", "enum": ["hint", "information", "warning", "error"]
+  // "diagnostic.checkCurrentLine": false,               // "When enabled, show all diagnostics of current line if there are none at the current position.", "default": false
+  // "diagnostic.messageDelay": 250,                     // "How long to wait (in milliseconds) before displaying the diagnostic message with echo or float", "default": 250
+  // "diagnostic.joinMessageLines": false,               // "Join lines messages to reduce lines of floating window.", "default": false
+  // "diagnostic.refreshOnInsertMode": false,            // "Enable diagnostic refresh on insert mode, default false.", "default": false
+  // "diagnostic.refreshAfterSave": false,               // "Only refresh diagnostics after save, default false.", "default": false
+  // "diagnostic.displayByAle": false,                   // "Use Ale for display diagnostics in vim, will disable coc for display diagnostics, restart required on change.", "default": false
+  // "diagnostic.virtualTextLines": 3,                   // "The number of non empty lines from a diagnostic to display", "default": 3
+  // "diagnostic.virtualTextLineSeparator": " \\ ",      // "The text that will mark a line end from the diagnostic message", "default": " \\ "
+  // "diagnostic.enableSign": true,                      // "Enable signs for diagnostics." "default": true,
+  // "diagnostic.enableHighlightLineNumber": true,       // "Enable highlighting line numbers for diagnostics, only works with neovim and diagnostic.enableSign is true." "default": true,
+  // "diagnostic.enableMessage": "always",               // "When to enable echo messages of diagnostics.", "default": "always", "enum": ["always", "jump", "never"]
+  // "diagnostic.locationlist": true,                    // "Create location list for error & warning", "default": true
+  // "diagnostic.highlightOffset": 1000,                 // "Offset number of buffer.addHighlight, neovim only.", "default": 1000
+  // "diagnostic.signOffset": 1000,                      // "Offset number of sign", "default": 1000
+  // "diagnostic.errorSign": ">>",                       // "Text of error sign", "default": ">>"
+  // "diagnostic.warningSign": "⚠",                      // "Text of warning sign", "default": "⚠"
+  // "diagnostic.infoSign": ">>",                                 // "Text of info sign", "default": ">>"
+  // "diagnostic.hintSign": ">>",                                 // "Text of hint sign", "default": ">>"
+  // "diagnostic.maxWindowHeight": 8,                             // "Maximum height of diagnostics floating window.", "default": 8
+  // "diagnostic.maxWindowWidth": 80,                             // "Maximum width of diagnostics floating window.", "default": 80
+  // "diagnostic.filetypeMap": {},                                // "A map between buffer filetype and the filetype assigned to diagnostics. To syntax highlight diagnostics withs their parent buffer type use '\"default\": \"bufferType\"'", "default": {}
+  // "diagnostic.format": "[%source%code] [%severity] %message",  // "Define the diagnostic format. Available parts: source, code, severity, message", "default": "[%source%code] [%severity] %message"
+  // "diagnostic.separateRelatedInformationAsDiagnostics": false, // "Separate related information as diagnostics" "default": false,
+
+  // "signature.enable": true,                           // "Enable signature help when trigger character typed, require restart service on change.", "default": true
+  // "signature.target": "float",                        // "Target of signature help, use float when possible by default. "enum": ["float", "echo"]
+  // "signature.maxWindowHeight": 100,                   // "Maximum height of floating signature help window.", "default": 8
+  // "signature.triggerSignatureWait": 50,               // "Timeout for trigger signature help, in miliseconds." "default": 50, "minimum": 50, "maximum": 300,
+  // "signature.floatMaxWidth": 60,                      // "Max width of signature float window." "default": 60,
+  // "signature.preferShownAbove": true,                 // "Show signature help float window above cursor when possible, require restart service on change.", "default": true
+  // "signature.hideOnTextChange": false,                // "Hide signature float window when text changed, require restart service on change.", "default": false
+
+  // "codeLens.enable": false,                           // "Enable codeLens feature, require neovim with set virtual text feature.", "default": false
+  // "codeLens.separator": "‣",                          // "Separator text for codeLens in virtual text", "default": "‣"
+
+  // "refactor.openCommand": "vsplit",                   // "Open command for refactor window.", "default": "vsplit"
+  // "refactor.beforeContext": 3,                        // "Print num lines of leading context before each match." "default": 3,
+  // "refactor.afterContext": 3,                         // "Print num lines of trailing context after each match." "default": 3,
+
+  // "workspace.ignoredFiletypes": ["markdown",          "log", "txt", "help"], // "Filetypes that should be ignored for resolve workspace folder.", "default": ["markdown", "log", "txt", "help"],
+
+  // "cursors.cancelKey": "<esc>",                       // "Key used for cancel cursors session." "default": "<esc>",
+  // "cursors.nextKey": "<C-n>",                         // "Key used for jump to next cursors position. " "default": "<C-n>",
+  // "cursors.previousKey": "<C-p>",                     // "Key used for jump to previous cursors position." "default": "<C-p>",
+
+  // "coc.source.around.priority": 1,                                      // "default": 1
+  // "coc.source.around.enable": true,                                     // "default": true
+  // "coc.source.buffer.enable": true,                                     // "default": true
+  // "coc.source.around.firstMatch": true,                                 // "Filter complete items by first letter strict match.", "default": true
+  // "coc.source.around.shortcut": "A",                                    // "default": "A"
+  // "coc.source.around.disableSyntaxes": [],                              // "default": [],
+  // "coc.source.buffer.shortcut": "B",                                    // "default": "B"
+  // "coc.source.buffer.priority": 1,                                      // "default": 1
+  // "coc.source.buffer.firstMatch": true,                                 // "Filter complete items by first letter strict match.", "default": true
+  // "coc.source.buffer.ignoreGitignore": true,                            // "Ignore git ignored files for buffer words" "default": true,
+  // "coc.source.buffer.disableSyntaxes": [],                              // "default": [],
+  // "coc.source.file.enable": true,                                       // "default": true
+  // "coc.source.file.shortcut": "F",                                      // "default": "F"
+  // "coc.source.file.priority": 10,                                       // "default": 10
+  // "coc.source.file.disableSyntaxes": [],                                // "default": [],
+  // "coc.source.file.triggerCharacters": ["/"],                           // "default": ["/"],
+  // "coc.source.file.trimSameExts": [".ts", ".js"],                       // "Trim same extension on file completion", "default": [".ts", ".js"],
+  // "coc.source.file.ignoreHidden": true,                                 // "Ignore completion for hidden files" "default": true,
+  // "coc.source.file.ignorePatterns": [],                                 // "Ignore patterns of matcher", "default": [],
+
+  "suggest.enablePreselect": true,
+  // "suggest.autoTrigger": "always",
+  // "suggest.echodocSupport": true,
+  // "suggest.enablePreview": true,
+  // "suggest.maxPreviewWidth": 100,
+  // "suggest.minTriggerInputLength": 1,
+  // "suggest.snippetIndicator": "►",
+  // "suggest.triggerAfterInsertEnter": true,
+  // "suggest.floatEnable": true,
+  // "suggest.noselect": true,
+  // "suggest.preferCompleteThanJumpPlaceholder": true,
+  // "suggest.languageSourcePriority": 99,
+
+  // "list.maxPreviewHeight": 12,                        // "Max height for preview window of list." "default": 12,
+  // "list.maxHeight": 10,                               // "Maximum height of list window." "default": 10,
+  // "list.indicator": ">",                              // "The characer used as first characer in prompt line" "default": ">",
+  // "list.interactiveDebounceTime": 100,                // "Debouce time for input change on interactive mode." "default": 100,
+  // "list.signOffset": 900,                             // "Sign offset of list, should be different from other plugins." "default": 900,
+  // "list.selectedSignText": "*",                       // "Sign text for selected lines." "default": "*",
+  // "list.extendedSearchMode": true,                    // "Enable extended search mode which allows multiple search patterns delimited by spaces." "default": true,
+  // "list.autoResize": true,                            // "Enable auto resize feature." "default": true,
+  // "list.limitLines": 30000,                           // "Limit lines for list buffer." "default": 30000,
+  // "list.previewSplitRight": false,                    // "Use vsplit for preview window." "default": false,
+  // "list.previewHighlightGroup": "Search",             // "Highlight group used for highlight the range in preview window." "default": "Search",
+  // "list.nextKeymap": "<C-j>",                         // "Key used for select next line on insert mode." "default": "<C-j>",
+  // "list.previousKeymap": "<C-k>",                     // "Key used for select previous line on insert mode." "default": "<C-k>",
+  // "list.normalMappings": {},                          // "Custom keymappings on normal mode." "default": {},
+  // "list.insertMappings": {},                          // "Custom keymappings on insert mode." "default": {},
+  // "list.source.outline.ctagsFilestypes": [],          // "Filetypes that should use ctags for outline instead of language server.", "default": [],
+
+  // ------------------------------------------------- //
+  //                                                   //
+  // Extentions                                        //
+  //                                                   //
+  // ------------------------------------------------- //
+
+  //
+  // https://github.com/neoclide/coc-snippets
+  //
+	// snippets.priority: priority of snippets source, default 90.
+	// snippets.editSnippetsCommand: Open command used for snippets.editSnippets command, use coc.preferences.jumpCommand by default.
+	// snippets.trace: Trace level of snippets channel.
+	// snippets.extends: extends filetype's snippets with other filetypes, example:
+	// snippets.userSnippetsDirectory, Directory that contains custom user ultisnips snippets, use ultisnips in extension root by default.
+	// snippets.shortcut, shortcut in completion menu, default S.
+	// snippets.autoTrigger: enable auto trigger for auto trigger ultisnips snippets, default true.
+	// snippets.triggerCharacters: trigger characters for completion, default [].
+	// snippets.loadFromExtensions: load snippets from coc.nvim extensions, default: true.
+	// snippets.convertToSnippetsAction: Add convert to snippet to code action list.
+	// snippets.textmateSnippetsRoots: absolute directories that contains textmate/VSCode snippets to load.
+	// snippets.ultisnips.enable: enable load UltiSnips snippets, default true.
+	// snippets.ultisnips.usePythonx: use pythonx for eval python code when possible, default true.
+	// snippets.ultisnips.pythonVersion: when usePythonx is false, python version to use for python code, default to 3.
+	// snippets.ultisnips.directories: directories that searched for snippet files, could be subfolder in every $runtimepath or absolute paths, default: ["UltiSnips"]
+	// snippets.snipmate.enable: enable load snipmate snippets, default true.
+	// snippets.snippets.author: author name used for g:snips_author
+
+  //
+  // https://github.com/iamcco/coc-svg
+  //
+  // "svg.completion.insertCloseTagSign": false, // "Specifies whether insert close tag sign '>'" "default": true,
+  // "svg.completion.showAdvanced": false, // "Specifies whether advanced items that are not commonly used are displayed in the AutoComplete list." "default": false,
+  // "svg.completion.showDeprecated": false, // "Specifies whether advanced items that are deprecated are displayed in the AutoComplete list." "default": false,
+  // "svg.disableFormatOnSave": false, // "Focus Disable SVGO Format On Save event if editor.formatOnSave is true" "default": false,
+  // "svg.format.plugins": {"sortAttrs": true}, // "Each items corresponds to a plugin that should be enabled, the rest is disabled."
+  // "svg.preview.background": "transparent", // "Specifies the Svg Preview Background" "enum": ["transparent", "white", "black", "custom"],
+  // "svg.preview.backgroundCustom": "#eee", // "Specifies the Svg Preview Custom Background" "default": "#eee",
+  // "svg.version": "1.1", // "Specifies the SVG standard version that will be used for autocompletion and validation.", "enum": ["1.1", "2.0"],
+  // "svg.priority": 99, // "default": 99
+
+  // "prettier.printWidth": 120,
+  // "prettier.tabWidth": 2,
+  // "prettier.useTabs": false,
+
+  // emmet.showExpandedAbbreviation": true, // Shows expanded Emmet abbreviations as suggestions, default true.
+  // emmet.showAbbreviationSuggestions": true, // Shows possible Emmet abbreviations as suggestions. Not applicable in stylesheets or when emmet.showExpandedAbbreviation is 'never'.
+  // emmet.includeLanguages": // Enable Emmet abbreviations in languages that are not supported by default. Add a mapping here between the language and emmet supported language. E.g.: {"vue-html": "html", "javascript": "javascriptreact"}
+  // emmet.variables": // Variables to be used in Emmet snippets
+  // emmet.syntaxProfiles": // Define profile for specified syntax or use your own profile with specific rules.
+  // emmet.excludeLanguages": // An array of languages where Emmet abbreviations should not be expanded, default: ["markdown"].
+  // emmet.optimizeStylesheetParsing": // When set to false, the whole file is parsed to determine if current position is valid for expanding Emmet abbreviations. When set to true, only the content around the current position in css/scss/less files is parsed.
+  // emmet.preferences": // Preferences used to modify behavior of some actions and resolvers of Emmet.
+
+  "git.enableGlobalStatus": true, // Enable global g:coc_git_status, default: true.
+  // git.command: Command for git, could be absolute path of git executable, default: "git".
+  // git.branchCharacter: Branch character used with g:coc_git_branch, default: "".
+  // git.remoteName: Remote name used for fetch github issues, default: origin.
+  // git.enableGutters: Enable gutters in sign column., default: true.
+  // git.realtimeGutters: Change to false when you want gutters update only on save, default: true.
+  // git.signOffset: Start offset of sign gutter, change to higher value to prevent overwrite by other plugin., default: 99.
+  // git.changedSign.text: Text of changed sign., default: "~".
+  // git.changedSign.hlGroup: Highlight group for changed sign., default: "DiffChange".
+  // git.addedSign.text: Text of added sign., default: "+".
+  // git.addedSign.hlGroup: Highlight group for added sign., default: "DiffAdd".
+  // git.removedSign.text: Text of removed sign., default: "_".
+  // git.removedSign.hlGroup: Highlight group for removed sign., default: "DiffDelete".
+  // git.topRemovedSign.text: Text of top removed sign., default: "‾".
+  // git.topRemovedSign.hlGroup: Highlight group for top removed sign., default: "DiffDelete".
+  // git.changeRemovedSign.text: Text of change removed sign., default: "≃".
+  // git.changeRemovedSign.hlGroup: Highlight group for change removed sign., default: "DiffDelete".
+  // git.splitWindowCommand: Command used when split new window for show commit, default: above sp
+  // git.virtualTextPrefix: Prefix of git blame information to virtual text, require virtual text feature of neovim. default: 5 <Space>.
+  // git.addGBlameToVirtualText: Add git blame information to virtual text, require virtual text feature of neovim. default: false.
+  // git.addGBlameToBufferVar: Add git blame information to b:coc_git_blame. default: false.
+  // git.semanticCommit.filetypes: filetype list to enable semantic commit completion, default: ["gitcommit", "gina-commit"]
+  // git.gitlab.hosts: Custom GitLab host list, defaults: ['gitlab.com']
+  // coc.source.issues.enable: enable issues completion from github, default true.
+  // coc.source.issues.priority: priority of issues source, default: 9.
+  // coc.source.issues.shortcut: shortcut of issues source, default: "I".
+  // coc.source.issues.filetypes: filetype list to enable issues source, default: ["gitcommit", "gina-commit"]
+
+  // highlight.disableLanguages, list of filetypes to ignore for this extension.
+  // highlight.document.enable, set to false to disable document symbol highlight.
+  // highlight.colors.enable, set to false to disable color highlight.
+
+  "eslint.enable": false,
+  // "eslint.quiet": false,
+  // "eslint.run": "onType", // onType or onSave
+  // "eslint.autoFixOnSave": true,
+  // "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
+  // "eslint.codeAction.disableRuleComment": {
+    // "enable": true, // show disable lint rule in the quick fix menu. true by default
+    // "location": "separateLine" // choose to either add the eslint-disable comment on the separateLine or sameLine
+  // },
+  // "eslint.codeAction.showDocumentation": {
+    // "enable": true // show open lint rule documentation web page in the quick fix menu
+  // },
+  // "eslint.nodePath": "/myGlobalNodePackages/node_modules" // use this setting if an installed ESLint package can't be detected. For example
+
+  // coc-lists
+	// session.saveOnVimLeave Save session on VimLeavePre., default to true
+	// session.directory directory for session files, default to ~/.vim/sessions
+	// session.restartOnSessionLoad Restart vim with cwd changed on session load, support neovim on iTerm2 only.
+	// lists.disabledLists: List names to disable form load., default: []
+	// list.source.files.command: Command used for search for files, default: ""
+	// list.source.files.args: Arguments for search command, default: []
+	// list.source.files.excludePatterns: Minimatch patterns that should be excluded., default: []
+	// list.source.mru.maxLength: Max length of mru list., default: 1000
+	// list.source.mru.ignoreGitIgnore: Ignore git ignored files., default: false
+	// list.source.mru.excludePatterns: Minimatch patterns that should be excluded., default: ["**/.git/*","/tmp/*"]
+	// list.source.grep.useLiteral: Use literal match unless specified regex options, default: true., default: true
+	// list.source.grep.command: Command used for grep, default to 'rg'., default: "rg" could be rg or ag.
+	// list.source.grep.maxColumns: Don't print lines longer than this limit in bytes, ripgrep only..
+	// list.source.tags.command: Command used for generate tags., default: "ctags -R ."
+	// list.source.grep.args: Arguments for grep command, always used for grep, default: []
+	// list.source.grep.excludePatterns: Minimatch patterns of files that should be excluded, use .ignore file is recommended., default: []
+
+	"html.enable": true, // set to false to disable html language server.
+	// html.trace.server set trace level of LSP traffic.
+	// html.execArgv add execArgv to child_process.spawn
+	// html.filetypes default [ "html", "handlebars", "htmldjango" ].
+	// html.format.enable enable format support.
+	// html.validate.scripts validate for embedded scripts.
+	// html.validate.styles validate for embedded styles.
+	// html.autoClosingTags Enable/disable autoClosing of HTML tags.
+
+	"json.enable": true, // set to false to disable json language server.
+	// json.trace.server trace LSP traffic in output channel.
+	// json.execArgv add execArgv to child_process.fork used for start json language server.
+	// json.format.enable set to false to disable format.
+	// json.schemas schema associations for json files.
+
+  "css.validate": true, // enables validation for css files, default true.
+  // "css.filetypes": ["css", "less", "wxss", "scss"], // defauts to ['css', 'less', 'wxss', 'scss'].
+  // "css.trace.server": true, // trace LSP traffic in output channel.
+  // "css.execArgv": true, // add execArgv to child_process.spawn
+  // "css.lint.[rulename]": set rule for css lint, to get list of rules, trigger completion in your css-settings.json
+  // "less.validate less.lint.[rulename]": same as css, but for less.
+  // "wxss.validate wxss.lint.[rulename]": same as css, but for wxss.
+  // "scss.validate scss.lint.[rulename]": same as css, but for scss.
+
+  "tsserver.enable": true, // Enable tsserver extension, default: true
+  // "tsserver.locale": "", // Locale of tsserver, default: ""
+  // "tsserver.typingsCacheLocation": "", // Folder path for cache typings, default: ""
+  // "tsserver.formatOnType": true, // Run format on type special characters., default: true
+  "tsserver.enableJavascript": true, // Use tsserver for javascript files, default: true
+  // "tsserver.tsdk": "", // Directory contains tsserver.js,, default: ""
+  // "tsserver.npm": "", // Executable path of npm for download typings, default: ""
+  // "tsserver.log": "off", // Log level of tsserver, default: "off"
+  // "tsserver.trace.server": "off", // Trace level of tsserver, default: "off"
+  "tsserver.reportStyleChecksAsWarnings": true, // default true
+  // "tsserver.implicitProjectConfig.checkJs": false, // Enable checkJs for implicit project, default: false
+  "tsserver.implicitProjectConfig.experimentalDecorators": true, // Enable experimentalDecorators for implicit project, default: false
+  // "tsserver.disableAutomaticTypeAcquisition": false, // Disable download of typings, default: false
+  // "tsserver.maxTsServerMemory":  // Set the maximum amount of memory to allocate to the TypeScript server process
+  // "tsserver.pluginRoot": "", // Folder contains tsserver plugins, default: []
+  // "tsserver.debugPort":Debug port number of tsserver
+  // "tsserver.useBatchedBufferSync": , // use batched buffer synchronize support.
+
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false, // default: true
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true, // default: false
+  "typescript.suggestionActions.enabled": false, // Enable/disable suggestion diagnostics for TypeScript files in the editor. default: true
+  // "typescript.updateImportsOnFileMove.enable": true, // Enable update imports on file move., default": true
+  // "typescript.implementationsCodeLens.enable": true, // Enable codeLens for implementations, default": true
+  // "typescript.referencesCodeLens.enable": true, // Enable codeLens for references, default": true
+  // "typescript.preferences.importModuleSpecifier": "auto", // default: "auto"
+  // "typescript.preferences.importModuleSpecifierEnding": true, // default": true
+  // "typescript.preferences.quoteStyle": "single", // default: "single"
+  // "typescript.validate.enable": true, // Enable/disable TypeScript validation., default: true
+  // "typescript.showUnused": true, // show unused variable hint, default: true.
+  // "typescript.suggest.enabled": true, // default": true
+  // "typescript.suggest.paths": true, // Enable/disable suggest paths in import statement and require calls, default": true
+  // "typescript.suggest.autoImports": true, // Enable/disable auto import suggests., default": true
+  // "typescript.suggest.completeFunctionCalls": true, // Enable snippet for method suggestion, default": true
+  // "typescript.format.enabled": true, // Enable/disable format of typescript files.
+  // "typescript.format.insertSpaceAfterCommaDelimiter": true, // default: true
+  // "typescript.format.insertSpaceAfterConstructor": false, // default": false
+  // "typescript.format.insertSpaceAfterSemicolonInForStatements": true, // default: true
+  // "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true, // default: true
+  // "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true, // default": true
+  // "typescript.format.insertSpaceBeforeFunctionParenthesis": false, // default": false
+  // "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false, // default: false
+  // "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false, // default: false
+  // "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false, // default": false
+  // "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false, // default: false
+  // "typescript.format.insertSpaceAfterTypeAssertion": false, // default": false
+  // "typescript.format.placeOpenBraceOnNewLineForFunctions": false, // default: false
+  // "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false, // default": false
+  // "typescript.suggest.includeAutomaticOptionalChainCompletions": true, // default": true
+
+  "javascript.format.enabled": true, // Enable/disable format for javascript files.
+  // "javascript.showUnused": true, // show unused variable hint.
+  // "javascript.implementationsCodeLens.enable": true, // default": true
+  // "javascript.referencesCodeLens.enable": true, // default: true
+  // "javascript.preferences.importModuleSpecifier": "auto", // default": "auto"
+  // "javascript.preferences.importModuleSpecifierEnding": true, // default: true
+  // "javascript.preferences.quoteStyle": "single", // default": "single"
+  // "javascript.validate.enable": true, // Enable/disable JavaScript validation., default": true
+  // "javascript.suggestionActions.enabled": true, // Enable/disable suggestion diagnostics for JavaScript files in the editor. Requires using TypeScript 2.8 or newer in the workspace., default": true
+  // "javascript.suggest.names": true, // default true
+  // "javascript.suggest.enabled": true, // default true
+  // "javascript.suggest.paths": true, // Enable/disable suggest paths in import statement and require calls, default": true
+  // "javascript.suggest.autoImports": true, // Enable/disable auto import suggests., default": true
+  // "javascript.suggest.completeFunctionCalls": true,// Enable snippet for method suggestion, default": true
+  // "javascript.format.insertSpaceAfterCommaDelimiter": true, // default: true
+  // "javascript.format.insertSpaceAfterConstructor": false, // default": false
+  // "javascript.format.insertSpaceAfterSemicolonInForStatements": true, // default: true
+  // "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true, // default": true
+  // "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true, // default: true
+  // "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true, // default": true
+  // "javascript.format.insertSpaceBeforeFunctionParenthesis": false, // default: false
+  // "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false, // default": false
+  // "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false, // default: false
+  // "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false, // default": false
+  // "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false, // default: false
+  // "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false, // default": false
+  // "javascript.format.insertSpaceAfterTypeAssertion": false, // default: false
+  // "javascript.format.placeOpenBraceOnNewLineForFunctions": false, // default": false
+  // "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false, // default: false
+  // "javascript.suggest.includeAutomaticOptionalChainCompletions": true, // default: true
+
+}
