@@ -1,0 +1,29 @@
+snippet iff "if else"
+if (${1:true}) {
+  ${2:console.log('if $1 is true')}
+}
+endsnippet
+
+
+snippet ife "if else"
+if (${1:true}) {
+  ${2:console.log('if $1 is true')}
+}
+else {
+  ${3:console.log('if $1 is false')}
+}
+endsnippet
+
+
+snippet foro "for of" b
+for (${1:let} ${2:value} of ${3:iterable}) {
+  ${4:console.log($2);}
+}
+endsnippet
+
+
+snippet foroe "for of Object.entries" b
+for (${1:let} [${2:key}, ${3:value}] of Object.entries(${4:object})) {
+  ${5:console.log($2, $3);}
+}
+endsnippet

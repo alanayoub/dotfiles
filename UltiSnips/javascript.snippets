@@ -1,0 +1,27 @@
+snippet fetch "fetch()" b
+fetch('${1:http://example.com/}')
+  .then(${2:response} => ${3:$2.json()})
+  .then(${4:data} => ${5:console.log($4)});
+endsnippet
+
+
+snippet oe "Object.entries()" b
+Object.entries(${1:object})
+endsnippet
+
+
+snippet us "use strict" b
+'use strict';
+
+
+endsnippet
+
+
+snippet i "import" b
+import ${1:a} from '${2:b}'
+endsnippet
+
+
+snippet log "console.log()" b
+console.log('${1:here}');
+endsnippet
