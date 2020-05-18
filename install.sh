@@ -23,10 +23,10 @@ vim -E -s -c PlugInstall -c q
 helpdir="~/.local/share/nvim/site/doc/"
 
 # Create a "doc" directory in a runtimepath
-mkdir -p ${helpdir}
+mkdir -p $helpdir
 
 # Copy the help file to the "doc" directory
-cp -r myhelp ${helpdir}
+cp -r myhelp $helpdir
 
 # Run :helpt vim command
 vim -E -c "helpt ${helpdir}myhelp/doc" -c q
