@@ -1,6 +1,10 @@
 myhelp	myhelp.txt	/*myhelp*
+myhelp-bash	myhelp.txt	/*myhelp-bash*
+myhelp-gnome	myhelp.txt	/*myhelp-gnome*
 myhelp-insert	myhelp.txt	/*myhelp-insert*
+myhelp-nerdtree	myhelp.txt	/*myhelp-nerdtree*
 myhelp-normal	myhelp.txt	/*myhelp-normal*
 myhelp-notes	myhelp.txt	/*myhelp-notes*
+myhelp-rebuild	myhelp.txt	/*myhelp-rebuild*
 myhelp-visual	myhelp.txt	/*myhelp-visual*
 myhelp.txt	myhelp.txt	/*myhelp.txt*
