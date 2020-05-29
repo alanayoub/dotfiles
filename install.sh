@@ -4,6 +4,7 @@
 ## Install config files
 ##
 
+cp .aliases ~/.aliases
 cp .tmux.conf ~/.tmux.conf
 cp init.vim ~/.config/nvim/init.vim
 cp coc-settins.json ~/.config/nvim/coc-settings.json

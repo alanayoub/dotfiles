@@ -1,0 +1,10 @@
+#!/bin/bash
+
+alias vim=nvim
+alias fd=fdfind
+
+# Git
+alias gpom="git pull origin master"
+
+# Mop Stock Tracker
+# alias mop="${install_dir}/go/src/github.com/mop-tracker/mop/bin/mop"
