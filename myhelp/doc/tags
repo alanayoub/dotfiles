@@ -6,5 +6,6 @@ myhelp-nerdtree	myhelp.txt	/*myhelp-nerdtree*
 myhelp-normal	myhelp.txt	/*myhelp-normal*
 myhelp-notes	myhelp.txt	/*myhelp-notes*
 myhelp-rebuild	myhelp.txt	/*myhelp-rebuild*
+myhelp-tmux	myhelp.txt	/*myhelp-tmux*
 myhelp-visual	myhelp.txt	/*myhelp-visual*
 myhelp.txt	myhelp.txt	/*myhelp.txt*

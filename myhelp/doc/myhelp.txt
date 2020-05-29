@@ -8,10 +8,11 @@ CONTENTS
 	2. Visual Mode...........................................|myhelp-visual|
 	3. Insert Mode...........................................|myhelp-insert|
 	4. NerdTree..............................................|myhelp-nerdtree|
-	5. Gnome.................................................|myhelp-gnome|
-	6. Bash..................................................|myhelp-bash|
-	7. Notes.................................................|myhelp-notes|
-	8. Rebuilding this file..................................|myhelp-rebuild|
+	5. Tmux..................................................|myhelp-tmux|
+	6. Gnome.................................................|myhelp-gnome|
+	7. Bash..................................................|myhelp-bash|
+	8. Notes.................................................|myhelp-notes|
+	9. Rebuilding this file..................................|myhelp-rebuild|
 
 ===============================================================================
 1. Normal Mode                                             *myhelp-normal*
@@ -111,18 +112,29 @@ CONTENTS
   - :EditBookmarks
 
 ===============================================================================
-5. Gnome                                                   *myhelp-gnome*
+5. Tmux                                                    *myhelp-tmux*
+
+Use tmuxinator to configure tmux layouts in yml
+https://github.com/tmuxinator/tmuxinator
+
+To generate a new custom tmux layout first setup a layout manually then
+run `tmux list-windows` in the terminal. Take the generated layout and
+use it in your tmuxinator yml file
+
+
+===============================================================================
+6. Gnome                                                   *myhelp-gnome*
 
   - A-[0-9]  // Go to tab (for example A-2 navigatges to the second tab)
 
 ===============================================================================
-6. Bash                                                    *myhelp-bash*
+7. Bash                                                    *myhelp-bash*
 
 ===============================================================================
-7. NOTES                                                   *myhelp-notes*
+8. NOTES                                                   *myhelp-notes*
 
 ===============================================================================
-8. REBUILDING THIS FILE                                    *myhelp-rebuild*
+9. REBUILDING THIS FILE                                    *myhelp-rebuild*
 
 This file is loaded as a plugin.
 If you ever need to rebuild the tags file run the below command and restart vim.
