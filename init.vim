@@ -43,6 +43,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
 
+  " Go
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
   " linters
   Plug 'w0rp/ale'
 
