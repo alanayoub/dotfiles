@@ -55,6 +55,7 @@ call plug#begin('~/.vim/plugged')
   "helpers
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-surround'
+  Plug 'majutsushi/tagbar'
 
   " File Explorer with Icons
   Plug 'scrooloose/nerdtree'
