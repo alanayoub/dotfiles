@@ -5,6 +5,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'morhetz/gruvbox'
   Plug 'arcticicestudio/nord-vim'
 
+  " Syntax
+  Plug 'sheerun/vim-polyglot'
+
   " Comments
   Plug 'preservim/nerdcommenter'
 
