@@ -22,11 +22,11 @@ call plug#begin('~/.vim/plugged')
   \ 'coc-bookmark',
   \ 'coc-emmet',
   \ 'coc-eslint',
+  \ 'coc-stylelint',
   \ 'coc-git',
   \ 'coc-highlight',
   \ 'coc-svg',
   \ 'coc-lists',
-  \ 'coc-css',
   \ 'coc-html',
   \ 'coc-json',
   \ 'coc-prettier',
@@ -61,7 +61,7 @@ call plug#begin('~/.vim/plugged')
   "helpers
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-surround'
-  Plug 'majutsushi/tagbar'
+  " Plug 'majutsushi/tagbar'
 
   " File Explorer with Icons
   Plug 'scrooloose/nerdtree'
@@ -174,7 +174,6 @@ nmap <Leader>bn <Plug>(coc-bookmark-next)
 nmap <Leader>bp <Plug>(coc-bookmark-prev)
 
 
-
 ""
 "" General
 ""
@@ -256,6 +255,8 @@ set directory=/tmp//
 " map fzf to ctrl+p
 nnoremap <C-P> :Files<CR>
 
+"" Tagbar
+nnoremap <silent> <F3> :TagbarToggle<CR>
 
 
 ""
@@ -287,7 +288,8 @@ let g:ale_echo_msg_format = '[%linter%] [%severity%] %s'
 let g:ale_linters = {
   \ '*': ['remove_trailing_lines', 'trim_whitespace'],
   \ 'javascript': ['eslint'],
-  \ 'typescript': ['eslint']
+  \ 'typescript': ['eslint'],
+  \ 'css': ['stylelint']
 \ }
 
 
